@@ -1,4 +1,4 @@
-#!/bin/bash
+*#!/bin/bash
 
 # Создание рабочей папки
 mkdir hse21_hw3
@@ -97,4 +97,4 @@ cd counts
 for srr in "SRR3414629" "SRR3414630" "SRR3414631" "SRR3414635" "SRR3414636" "SRR3414637"; do echo ''; echo $srr; grep '_' $srr; done
 
 # Объединям все файлы .counts по генам в один общий файл ALL.counts
-paste $(ls SRR*.counts) | cut -f1,2,4,6,8,10,12 | awk 'BEGIN {print "geneID c1 c2 c3 r1 r2 r3"}{print}' | column -t > ALL.counts
+paste $(ls SRR*.counts) | cut -f1,2,4,6,8,10,12 | awk 'BEGIN {print "geneID r1 r2 r3 c1 c2 c3"}{print}' | column -t > ALL.counts
