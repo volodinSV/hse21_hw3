@@ -1,4 +1,4 @@
-*#!/bin/bash
+#!/bin/bash
 
 # Создание рабочей папки
 mkdir hse21_hw3
